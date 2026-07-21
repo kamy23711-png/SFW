@@ -15,7 +15,6 @@ export function Dashboard(){
 
             "NC旋盤",
 
-            MachineButton("M01"),
 
         )
 
