@@ -1,1 +1,83 @@
+/* ========================================
+   ハンバーガーボタン
+======================================== */
 
+.hamburger{
+
+    /* ボタンの大きさ */
+    width:48px;
+    height:48px;
+
+    /* デフォルトのボタンデザインを無効化 */
+    border:none;
+    background:transparent;
+
+    /* マウスカーソルを指マークにする */
+    cursor:pointer;
+
+    /* 三本線を縦に並べる */
+    display:flex;
+    flex-direction:column;
+
+    /* 三本線を中央に配置 */
+    justify-content:center;
+    align-items:center;
+
+    /* 三本線の間隔 */
+    gap:6px;
+
+}
+
+
+/* ========================================
+   三本線
+======================================== */
+
+.hamburger span{
+
+    /* 線の大きさ */
+    width:24px;
+    height:3px;
+
+    /* 線の色 */
+    background:black;
+
+    /* 少し角を丸くする */
+    border-radius:2px;
+
+    /* アニメーション */
+    transition:0.3s;
+
+}
+
+
+/* ========================================
+   開いた状態（☰ → ×）
+======================================== */
+
+/* 1本目を右下へ移動して45°回転 */
+.hamburger.active span:nth-child(1){
+
+    transform:
+        translateY(9px)
+        rotate(45deg);
+
+}
+
+
+/* 真ん中の線を消す */
+.hamburger.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+
+/* 3本目を左上へ移動して-45°回転 */
+.hamburger.active span:nth-child(3){
+
+    transform:
+        translateY(-9px)
+        rotate(-45deg);
+
+}
