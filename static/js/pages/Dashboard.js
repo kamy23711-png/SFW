@@ -1,6 +1,5 @@
 import { Header } from "../components/Header.js";
 import { Card } from "../components/Card.js";
-import { MachineButton } from "../components/MachineButton.js";
 
 export function Dashboard(){
 
